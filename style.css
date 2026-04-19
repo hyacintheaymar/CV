@@ -1,0 +1,234 @@
+:root {
+    --bg: #ececec;
+    --ink: #111430;
+    --muted: #3f4460;
+    --white: #ffffff;
+    --pill: #161842;
+    --line: #262a5d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at 10% 0%, #f7f7f7 0%, var(--bg) 35%, #e6e6e6 100%);
+    color: var(--ink);
+    font-family: "Source Sans 3", sans-serif;
+    line-height: 1.35;
+    padding: 18px 10px;
+}
+
+.cv {
+    max-width: 980px;
+    margin: 0 auto;
+    background: linear-gradient(160deg, #f4f4f4 0%, #ededed 100%);
+    border: 1px solid #d5d5d5;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(20, 24, 49, 0.08);
+    padding: 14px;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.photo-wrap {
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f8f8f8;
+    box-shadow: 0 6px 16px rgba(22, 24, 66, 0.2);
+    background: conic-gradient(from 180deg, #1f214f, #2f377e, #1f214f);
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.identity h1 {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.6rem, 3.3vw, 2.3rem);
+    letter-spacing: 0.03em;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.identity h1 .accent {
+    font-weight: 800;
+    color: #181c53;
+}
+
+.identity h4 {
+    font-family: "League Spartan", sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 2.6vw, 1.38rem);
+    margin-bottom: 8px;
+}
+
+.intro {
+    color: var(--muted);
+    font-size: 1.02rem;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pill {
+    background: var(--pill);
+    color: var(--white);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pill-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.4fr;
+    gap: 16px;
+}
+
+.section-title {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.95rem;
+    letter-spacing: 0.01em;
+    border-bottom: 3px solid var(--line);
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+}
+
+.left section,
+.right section {
+    margin-bottom: 10px;
+}
+
+.left ul,
+.right ul {
+    padding-left: 18px;
+}
+
+.left li,
+.right li,
+.right p,
+.left p {
+    font-size: 1.12rem;
+    margin-bottom: 4px;
+}
+
+.left strong,
+.right strong {
+    font-weight: 700;
+}
+
+.item-title {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.55rem;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.subline {
+    color: #2b3156;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.projet-item {
+    margin-bottom: 8px;
+}
+
+.projet-item h4 {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.55rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.projet-item p {
+    font-size: 1.12rem;
+    color: #2a2e4b;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 10px;
+    }
+
+    .cv {
+        padding: 10px;
+    }
+
+    .top {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .identity h1 {
+        line-height: 1.05;
+    }
+
+    .contact {
+        justify-content: center;
+    }
+
+    .left li,
+    .right li,
+    .right p,
+    .left p,
+    .projet-item p {
+        font-size: 1.02rem;
+    }
+
+    .item-title,
+    .projet-item h4 {
+        font-size: 1.35rem;
+    }
+}
