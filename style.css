@@ -268,3 +268,94 @@ body {
     }
 }
 
+@media print {
+    @page {
+        margin: 0.5cm;
+    }
+    
+    body {
+        padding: 0;
+        background: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .cv {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        background: none;
+    }
+    
+    .lang-switch {
+        display: none !important;
+    }
+    
+    .top {
+        margin-bottom: 8px;
+        gap: 10px;
+    }
+    
+    .photo-wrap {
+        width: 85px;
+        height: 85px;
+        border-width: 2px;
+    }
+    
+    .identity h1 {
+        font-size: 1.6rem;
+    }
+    
+    .identity h4 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    
+    .intro {
+        font-size: 0.88rem;
+        margin-bottom: 6px;
+    }
+    
+    .pill {
+        padding: 2px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+    }
+    
+    .item-title,
+    .projet-item h4 {
+        font-size: 1.15rem;
+    }
+    
+    .subline,
+    .projet-item p,
+    .left li,
+    .right li,
+    .left p,
+    .right p {
+        font-size: 0.9rem;
+        margin-bottom: 2px;
+    }
+    
+    .left section,
+    .right section {
+        margin-bottom: 6px;
+    }
+    
+    .projet-item {
+        margin-bottom: 4px;
+    }
+    
+    /* Avoid breaking items across pages */
+    .projet-item, .left section, .right section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
+
